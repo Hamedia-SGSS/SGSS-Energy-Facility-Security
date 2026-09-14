@@ -46,7 +46,7 @@ export default function EnergyFacilitySecurityPage() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroBg}>
           <Image
-            src="/energy_facility_hero.png"
+            src="https://cms.secureguardservices.com/wp-content/uploads/2026/09/elc1.png"
             alt="Secure Guard officer standing in front of a sleek modern energy facility substation at twilight"
             fill
             className={styles.heroBgImg}
@@ -141,8 +141,8 @@ export default function EnergyFacilitySecurityPage() {
           <div className={styles.addonGrid}>
             <div className={styles.addonImageCol}>
               <Image 
-                src="/energy_facility_patrol.png" 
-                alt="Secure Guard officer checking security gates and fences at twilight" 
+                src="https://cms.secureguardservices.com/wp-content/uploads/2026/09/elc2.png" 
+                alt="Secure Guard officer conducting disciplined operations and controlled access verification at facility gate" 
                 width={600} 
                 height={500} 
                 className={styles.addonImage} 
