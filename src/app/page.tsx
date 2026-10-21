@@ -6,16 +6,16 @@ import { PreFooterCTA } from "@/components/PreFooterCTA";
 
 // Reusable data for situations, fits, and coverage
 const situations = [
-  { icon: "🚧", title: "Perimeter Breaches", desc: "Deterring and detecting intruders attempting to scale or cut fencing at facility borders." },
-  { icon: "👤", title: "Unauthorized Access", desc: "Enforcing strict access protocols to prevent entry into hazardous high-voltage zones." },
-  { icon: "🔌", title: "Equipment Theft", desc: "Preventing copper theft, asset removal, and tool theft from maintenance yards and generator stations." },
-  { icon: "🎨", title: "Vandalism", desc: "Protecting solar panels, transformers, and structures from sabotage, graffiti, or damage." },
-  { icon: "📢", title: "Protest Activity", desc: "Maintaining peaceful perimeter control and protecting critical entry points during demonstrations." },
-  { icon: "🚚", title: "Vendor Verification", desc: "Managing check-ins, logging license plates, and verifying delivery authorization for all arrivals." },
-  { icon: "🔑", title: "Gate Control", desc: "Running entrance checkpoints, validating security badges, and tracking visitor logs." },
-  { icon: "📡", title: "Remote Site Monitoring", desc: "Conducting regular sweeps at isolated battery storage, wind farms, or unmanned substations." },
-  { icon: "🌌", title: "After-Hours Patrols", desc: "Ensuring 24/7 visual vigilance over facility machinery and perimeter lines overnight." },
-  { icon: "🚨", title: "Emergency Support", desc: "Providing immediate coordination and escalation support in the event of operational outages or fires." },
+  { icon: "🚧", title: "Perimeter Breaches", desc: "Observing and reporting individuals attempting to scale or cut fencing at facility borders." },
+  { icon: "👤", title: "Unauthorized Access", desc: "Officers control only the access points they are authorized to staff; high-voltage and hazardous operational zones remain under facility personnel procedures." },
+  { icon: "🔌", title: "Equipment Theft", desc: "Patrolling designated areas to help deter copper and equipment theft and report suspicious activity around maintenance yards and generator stations." },
+  { icon: "🎨", title: "Vandalism", desc: "Patrolling solar arrays, transformers, and structures to help deter sabotage, graffiti, or damage and document incidents." },
+  { icon: "📢", title: "Public Demonstrations", desc: "Observing perimeter activity, coordinating authorized site access, and documenting incidents per post orders during lawful demonstrations." },
+  { icon: "🚚", title: "Vendor Verification", desc: "Managing check-ins, logging license plates, and verifying delivery authorization for arrivals per facility post orders." },
+  { icon: "🔑", title: "Gate Control", desc: "Staffing authorized entrance checkpoints, checking security badges, and maintaining visitor logs." },
+  { icon: "📡", title: "Remote Site Monitoring", desc: "Conducting scheduled patrol sweeps at isolated battery storage, wind farms, or unmanned substations as contracted." },
+  { icon: "🌌", title: "After-Hours Patrols", desc: "Providing scheduled patrols or continuous on-site monitoring as specified in the client's service agreement." },
+  { icon: "🚨", title: "Emergency Support", desc: "Notifying designated facility contacts and emergency services according to the facility emergency plan and contracted response procedure." },
 ];
 
 const properties = [
@@ -30,10 +30,10 @@ const properties = [
 ];
 
 const coverageOptions = [
-  { service: "Remote Site Patrols", schedule: "24/7 or Nights", desc: "Mobile sweeps and perimeter monitoring at unmanned utility sites and substations." },
-  { service: "Gate Control & Verification", schedule: "Ongoing / Shift Focus", desc: "Credential checks, vendor logging, and badge verification at active energy facilities." },
-  { service: "Construction & Expansion Phase", schedule: "Temporary / Full-Time", desc: "Protecting equipment, solar arrays, and transformers during initial build and installation cycles." },
-  { service: "Maintenance & Shutdown Support", schedule: "Flexible / Targeted", desc: "Increased coverage during high-activity maintenance windows or outage response periods." },
+  { service: "Remote Site Patrols", schedule: "Sample: 24/7 or Overnight", desc: "Scheduled mobile sweeps and perimeter observation at unmanned utility sites and substations per service agreement." },
+  { service: "Gate Control & Verification", schedule: "Sample: Shift-Based", desc: "Credential checks, vendor logging, and badge verification at authorized energy facility gates." },
+  { service: "Construction & Expansion Phase", schedule: "Sample: Temporary / Full-Time", desc: "On-site presence and patrols to help deter theft or damage to equipment, solar arrays, and transformers during build cycles." },
+  { service: "Maintenance & Shutdown Support", schedule: "Sample: Flexible / Targeted", desc: "Supplemental staffing during high-activity maintenance windows or outage periods as contracted." },
 ];
 
 export default function EnergyFacilitySecurityPage() {
@@ -65,7 +65,7 @@ export default function EnergyFacilitySecurityPage() {
               Protect Critical Infrastructure, Restricted Areas, Equipment, <span className={styles.heroTitleAccent}>and Operational Continuity</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Secure Guard Security Services delivers disciplined, highly documented physical security to mitigate risk and defend vital utility sites, substations, and energy facilities.
+              Secure Guard Security Services delivers disciplined, well-documented physical security to help deter unauthorized activity and support vital utility sites, substations, and energy facilities.
             </p>
             <div className={styles.heroCtas}>
               <a 
@@ -98,27 +98,27 @@ export default function EnergyFacilitySecurityPage() {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionTag}>Real-Life Problem</span>
             <h2 className={styles.sectionTitle}>
-              Challenges of protecting <span className={styles.titleAccent}>Critical Energy Infrastructure</span>
+              Challenges of Protecting <span className={styles.titleAccent}>Critical Energy Infrastructure</span>
             </h2>
           </div>
           <div className={styles.whyGrid}>
             <div className={styles.whyText}>
               <p className={styles.bodyText}>
-                Energy facilities often include high-value equipment, restricted access areas, utility infrastructure, remote locations, and operational systems that must remain protected.
+                Energy facilities often include high-value equipment, restricted access areas, utility infrastructure, remote locations, and operational systems that require consistent access control and observation.
               </p>
               <p className={styles.bodyText}>
-                Security concerns can include unauthorized access, vandalism, theft, protest activity, perimeter breaches, employee safety, and after-hours incidents.
+                Security concerns can include unauthorized access, vandalism, equipment theft, public demonstrations near entry points, perimeter breaches, employee safety, and after-hours incidents.
               </p>
               <p className={styles.bodyText}>
-                Clients need security personnel who understand that energy facility security requires discipline, documentation, and controlled access.
+                Clients need security personnel who understand that energy facility security requires discipline, accurate documentation, and adherence to written post orders.
               </p>
             </div>
             <div className={styles.whyCards}>
               {[
                 { icon: "🚧", title: "Perimeter Breaches", desc: "Solar farms and remote utility fields cover wide, isolated areas vulnerable to fence intrusions." },
                 { icon: "🔌", title: "Equipment Theft", desc: "High-value copper cabling, machinery, and energy components are frequent targets for organized theft." },
-                { icon: "👤", title: "Unauthorized Entry", desc: "Intruders entering hazardous or high-voltage zones pose immense liability and safety risks." },
-                { icon: "📢", title: "Protest & Vandalism", desc: "Public protest activity and active vandalism risk shutting down operation-critical infrastructure." },
+                { icon: "👤", title: "Unauthorized Entry", desc: "Unauthorized individuals near restricted or high-voltage zones pose serious safety and operational risks." },
+                { icon: "📢", title: "Demonstrations & Vandalism", desc: "Separating lawful public demonstration activity from unlawful vandalism or security breaches through behavior-based observation, access coordination, and incident reporting." },
               ].map((c) => (
                 <div key={c.title} className={styles.whyCard}>
                   <div className={styles.whyCardIconWrapper}>
@@ -155,10 +155,10 @@ export default function EnergyFacilitySecurityPage() {
                 Disciplined Operations & <span className={styles.titleAccent}>Controlled Access Verification</span>
               </h2>
               <p className={styles.bodyText}>
-                Secure Guard provides energy facility security officers for gate control, perimeter patrols, visitor and vendor verification, restricted area monitoring, equipment checks, incident reporting, and emergency response support.
+                Secure Guard provides energy facility security officers for gate control, perimeter patrols, visitor and vendor verification, authorized area observation, exterior equipment checks, incident reporting, and emergency notification support. Standing guards, mobile patrols, and specialized assignments are provided as specified in the client&apos;s service agreement.
               </p>
               <p className={styles.bodyText}>
-                Our officers undergo site-specific training focusing on safety rules, hazard identification, and strict logging protocols. We provide the visible deterrence and professional accountability required to defend utility infrastructure.
+                Our officers complete required site-specific safety orientation, hazard awareness, and post-order procedures documented in the facility agreement. We provide visible deterrence, structured reporting, and professional accountability to support utility infrastructure operations.
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function EnergyFacilitySecurityPage() {
             </h2>
           </div>
           <p className={styles.bodyTextCenteredLight}>
-            Coverage can be customized for remote sites, active facilities, construction phases, maintenance periods, or ongoing operations. We scale our security footprint to match your project timeline.
+            Coverage can be customized for remote sites, active facilities, construction phases, maintenance periods, or ongoing operations. Published schedules below are sample options; actual staffing levels, patrol frequencies, and coverage hours are defined by your written service agreement.
           </p>
 
           {/* Coverage Options Table */}
@@ -184,7 +184,7 @@ export default function EnergyFacilitySecurityPage() {
               <thead>
                 <tr>
                   <th>Coverage Type</th>
-                  <th>Schedule Focus</th>
+                  <th>Sample Schedule</th>
                   <th>Description</th>
                 </tr>
               </thead>
@@ -214,17 +214,17 @@ export default function EnergyFacilitySecurityPage() {
                 What This Means <span className={styles.titleAccentGold}>for the Client</span>
               </h2>
               <p className={styles.bodyTextLight}>
-                By deploying Secure Guard, you gain a professional partner dedicated to compliance, safety standards, and robust security documentation.
+                By deploying Secure Guard, you gain a professional security partner focused on post-order compliance, safety awareness, and thorough incident documentation.
               </p>
             </div>
             <div className={styles.opsFeatures}>
               {[
-                "Stronger control over restricted areas",
-                "Better protection for critical equipment",
+                "Stronger access control at staffed entry points",
+                "Visible deterrence around critical equipment",
                 "Documented access and patrol activity",
                 "Reduced risk of trespassing or vandalism",
                 "Support for employees, vendors, and contractors",
-                "Clear escalation procedures",
+                "Clear notification and escalation procedures",
                 "Flexible coverage for operational and remote facilities",
               ].map((benefit, idx) => (
                 <div key={idx} className={styles.opsFeatureItem}>
@@ -266,10 +266,10 @@ export default function EnergyFacilitySecurityPage() {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionTagLight}>Best Fit For</span>
             <h2 className={styles.sectionTitleLight}>
-              Facilities We <span className={styles.titleAccentGold}>Secure & Monitor</span>
+              Facilities We <span className={styles.titleAccentGold}>Serve & Monitor</span>
             </h2>
             <p className={styles.sectionSubtextLight}>
-              Our specialized energy security program is optimized to secure a broad range of critical infrastructure and power development sectors.
+              Our energy facility security services are tailored for a wide range of critical infrastructure and power generation sites.
             </p>
           </div>
           <div className={styles.propertiesGrid}>
