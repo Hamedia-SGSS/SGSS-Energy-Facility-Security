@@ -3,30 +3,31 @@ import styles from "./page.module.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
+import { ShieldIcon, type ShieldIconName } from "@/components/ShieldIcon";
 
 // Reusable data for situations, fits, and coverage
-const situations = [
-  { icon: "🚧", title: "Perimeter Breaches", desc: "Observing and reporting individuals attempting to scale or cut fencing at facility borders." },
-  { icon: "👤", title: "Unauthorized Access", desc: "Officers control only the access points they are authorized to staff; high-voltage and hazardous operational zones remain under facility personnel procedures." },
-  { icon: "🔌", title: "Equipment Theft", desc: "Patrolling designated areas to help deter copper and equipment theft and report suspicious activity around maintenance yards and generator stations." },
-  { icon: "🎨", title: "Vandalism", desc: "Patrolling solar arrays, transformers, and structures to help deter sabotage, graffiti, or damage and document incidents." },
-  { icon: "📢", title: "Public Demonstrations", desc: "Observing perimeter activity, coordinating authorized site access, and documenting incidents per post orders during lawful demonstrations." },
-  { icon: "🚚", title: "Vendor Verification", desc: "Managing check-ins, logging license plates, and verifying delivery authorization for arrivals per facility post orders." },
-  { icon: "🔑", title: "Gate Control", desc: "Staffing authorized entrance checkpoints, checking security badges, and maintaining visitor logs." },
-  { icon: "📡", title: "Remote Site Monitoring", desc: "Conducting scheduled patrol sweeps at isolated battery storage, wind farms, or unmanned substations as contracted." },
-  { icon: "🌌", title: "After-Hours Patrols", desc: "Providing scheduled patrols or continuous on-site monitoring as specified in the client's service agreement." },
-  { icon: "🚨", title: "Emergency Support", desc: "Notifying designated facility contacts and emergency services according to the facility emergency plan and contracted response procedure." },
+const situations: { icon: ShieldIconName; title: string; desc: string }[] = [
+  { icon: "perimeter", title: "Perimeter Breaches", desc: "Observing and reporting individuals attempting to scale or cut fencing at facility borders." },
+  { icon: "unauthorized", title: "Unauthorized Access", desc: "Officers control only the access points they are authorized to staff; high-voltage and hazardous operational zones remain under facility personnel procedures." },
+  { icon: "equipment", title: "Equipment Theft", desc: "Patrolling designated areas to help deter copper and equipment theft and report suspicious activity around maintenance yards and generator stations." },
+  { icon: "vandalism", title: "Vandalism", desc: "Patrolling solar arrays, transformers, and structures to help deter sabotage, graffiti, or damage and document incidents." },
+  { icon: "demonstration", title: "Public Demonstrations", desc: "Observing perimeter activity, coordinating authorized site access, and documenting incidents per post orders during lawful demonstrations." },
+  { icon: "vendor", title: "Vendor Verification", desc: "Managing check-ins, logging license plates, and verifying delivery authorization for arrivals per facility post orders." },
+  { icon: "gate", title: "Gate Control", desc: "Staffing authorized entrance checkpoints, checking security badges, and maintaining visitor logs." },
+  { icon: "remote", title: "Remote Site Monitoring", desc: "Conducting scheduled patrol sweeps at isolated battery storage, wind farms, or unmanned substations as contracted." },
+  { icon: "patrol", title: "After-Hours Patrols", desc: "Providing scheduled patrols or continuous on-site monitoring as specified in the client's service agreement." },
+  { icon: "emergency", title: "Emergency Support", desc: "Notifying designated facility contacts and emergency services according to the facility emergency plan and contracted response procedure." },
 ];
 
-const properties = [
-  { icon: "⚡", label: "Utility Sites" },
-  { icon: "🏭", label: "Power Facilities" },
-  { icon: "☀️", label: "Solar Farms" },
-  { icon: "🔋", label: "Energy Storage Sites" },
-  { icon: "🔌", label: "Substations" },
-  { icon: "🏗️", label: "Maintenance Yards" },
-  { icon: "🌐", label: "Infrastructure Sites" },
-  { icon: "🏢", label: "Critical Facility Locations" },
+const properties: { icon: ShieldIconName; label: string }[] = [
+  { icon: "utility", label: "Utility Sites" },
+  { icon: "power", label: "Power Facilities" },
+  { icon: "solar", label: "Solar Farms" },
+  { icon: "storage", label: "Energy Storage Sites" },
+  { icon: "substation", label: "Substations" },
+  { icon: "maintenance", label: "Maintenance Yards" },
+  { icon: "infrastructure", label: "Infrastructure Sites" },
+  { icon: "facility", label: "Critical Facility Locations" },
 ];
 
 const coverageOptions = [
@@ -95,14 +96,12 @@ export default function EnergyFacilitySecurityPage() {
       {/* ===== SECTION 2: REAL-LIFE PROBLEM ===== */}
       <section className={styles.whySection} id="problem">
         <div className="container">
-          <div className={styles.sectionHeader}>
-            <span className={styles.sectionTag}>Real-Life Problem</span>
-            <h2 className={styles.sectionTitle}>
-              Challenges of Protecting <span className={styles.titleAccent}>Critical Energy Infrastructure</span>
-            </h2>
-          </div>
           <div className={styles.whyGrid}>
             <div className={styles.whyText}>
+              <span className={styles.sectionTag}>Real-Life Problem</span>
+              <h2 className={styles.sectionTitle}>
+                Challenges of Protecting <span className={styles.titleAccent}>Critical Energy Infrastructure</span>
+              </h2>
               <p className={styles.bodyText}>
                 Energy facilities often include high-value equipment, restricted access areas, utility infrastructure, remote locations, and operational systems that require consistent access control and observation.
               </p>
@@ -114,15 +113,17 @@ export default function EnergyFacilitySecurityPage() {
               </p>
             </div>
             <div className={styles.whyCards}>
-              {[
-                { icon: "🚧", title: "Perimeter Breaches", desc: "Solar farms and remote utility fields cover wide, isolated areas vulnerable to fence intrusions." },
-                { icon: "🔌", title: "Equipment Theft", desc: "High-value copper cabling, machinery, and energy components are frequent targets for organized theft." },
-                { icon: "👤", title: "Unauthorized Entry", desc: "Unauthorized individuals near restricted or high-voltage zones pose serious safety and operational risks." },
-                { icon: "📢", title: "Demonstrations & Vandalism", desc: "Separating lawful public demonstration activity from unlawful vandalism or security breaches through behavior-based observation, access coordination, and incident reporting." },
-              ].map((c) => (
+              {(
+                [
+                  { icon: "perimeter", title: "Perimeter Breaches", desc: "Solar farms and remote utility fields cover wide, isolated areas vulnerable to fence intrusions." },
+                  { icon: "equipment", title: "Equipment Theft", desc: "High-value copper cabling, machinery, and energy components are frequent targets for organized theft." },
+                  { icon: "unauthorized", title: "Unauthorized Entry", desc: "Unauthorized individuals near restricted or high-voltage zones pose serious safety and operational risks." },
+                  { icon: "demonstration", title: "Demonstrations & Vandalism", desc: "Separating lawful public demonstration activity from unlawful vandalism or security breaches through behavior-based observation, access coordination, and incident reporting." },
+                ] satisfies { icon: ShieldIconName; title: string; desc: string }[]
+              ).map((c) => (
                 <div key={c.title} className={styles.whyCard}>
                   <div className={styles.whyCardIconWrapper}>
-                    <span className={styles.whyCardIcon}>{c.icon}</span>
+                    <ShieldIcon name={c.icon} size={38} className={styles.whyCardIcon} />
                   </div>
                   <div className={styles.whyCardContent}>
                     <h3 className={styles.whyCardTitle}>{c.title}</h3>
@@ -228,7 +229,9 @@ export default function EnergyFacilitySecurityPage() {
                 "Flexible coverage for operational and remote facilities",
               ].map((benefit, idx) => (
                 <div key={idx} className={styles.opsFeatureItem}>
-                  <span className={styles.opsFeatureIcon}>🛡️</span>
+                  <span className={styles.opsFeatureIcon}>
+                    <ShieldIcon name="check" size={24} />
+                  </span>
                   <span className={styles.opsFeatureLabel}>{benefit}</span>
                 </div>
               ))}
@@ -250,7 +253,9 @@ export default function EnergyFacilitySecurityPage() {
             {situations.map((sit, index) => (
               <div key={index} className={styles.situationCard}>
                 <div className={styles.situationHeader}>
-                  <span className={styles.situationIcon}>{sit.icon}</span>
+                  <span className={styles.situationIcon}>
+                    <ShieldIcon name={sit.icon} size={36} />
+                  </span>
                   <h3 className={styles.situationTitle}>{sit.title}</h3>
                 </div>
                 <p className={styles.situationDesc}>{sit.desc}</p>
@@ -275,7 +280,9 @@ export default function EnergyFacilitySecurityPage() {
           <div className={styles.propertiesGrid}>
             {properties.map((prop, idx) => (
               <div key={idx} className={styles.propertyCard}>
-                <div className={styles.propertyIcon}>{prop.icon}</div>
+                <div className={styles.propertyIcon}>
+                  <ShieldIcon name={prop.icon} size={42} />
+                </div>
                 <span className={styles.propertyLabel}>{prop.label}</span>
               </div>
             ))}
